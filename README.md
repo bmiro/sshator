@@ -14,7 +14,7 @@ in debian-like distros:
 
 sshator lets you to craft ssh uris and execute them easily i.e:
 
-   sshator l1s3r:secretpassword@remote.host.com:2323
+   python sshator.py l1s3r:secretpassword@remote.host.com:2323
 
 This will open the default terminal (x-terminal-emulator) with an ssh
 connection to remote.host.com at port 2323 using user l1s3r using
