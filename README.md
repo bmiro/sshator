@@ -27,5 +27,9 @@ associate your webbrowser to sshator.
 YES, I know is better to use sshkeys but in *some* *puntal* *controlled* cases
 this is very useful.
 
+= How to register custom URIs =
+
+http://edoceo.com/howto/xfce-custom-uri-handler
+
 
 Use with care.
