@@ -24,11 +24,11 @@ if __name__=='__main__':
     cmd_tpl_params = {
         'term': 'x-terminal-emulator',
         'username': "%s@" % username if username else '',
-        'password': "-p %s" % password if password else '',
+        'password': "sshpass -p %s" % password if password else '',
         'host': host,
         'port':  " -p %s" % port if port else ''
     }
-    cmd_base =  "${term} -e sshpass ${password} ssh ${username}$host ${port}"
+    cmd_base =  "${term} -e ${password} ssh ${username}$host ${port}"
     cmd = Template(cmd_base).substitute(cmd_tpl_params)
 
     args = shlex.split(cmd)
