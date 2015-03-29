@@ -3,7 +3,7 @@
 
 import shlex
 import subprocess
- 
+
 from string import Template
 
 import click
@@ -22,18 +22,18 @@ def sshator(term, uri):
     username = extracted_uri['username']
     password = extracted_uri['password']
     host = extracted_uri['host']
-    port = extracted_uri['port'] 
+    port = extracted_uri['port']
 
     cmd_tpl_params = {
         'term': term,
-        'username': "%s@" % username if username else '',
-        'password': "sshpass -p %s" % password if password else '',
+        'username': u"%s@" % username if username else '',
+        'password': u"sshpass -p %s" % password if password else '',
         'host': host,
-        'port':  " -p %s" % port if port else ''
+        'port':  u" -p %s" % port if port else ''
     }
-    cmd_base =  "${term} -e ${password} ssh ${username}$host ${port}"
+    cmd_base = u"${term} -e ${password} ssh ${username}$host ${port}"
     cmd = Template(cmd_base).substitute(cmd_tpl_params)
- 
+
     args = shlex.split(cmd)
     subprocess.call(args)
 
@@ -45,4 +45,4 @@ def telnetator(term, uri):
     " Telnet URI handler, open a Telnet connection to given URI in
     " a new terminal.
     """
-    raise NotImplemented
+    raise NotImplementedError
