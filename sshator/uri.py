@@ -55,7 +55,7 @@ def craft(host, username=None, password=None, port=22, scheme=u"ssh"):
 
     uri_auth = u"%s%s@" % (uri_username, uri_password) if uri_username else u""
 
-    return u"%s://%s%s" % (shceme, uri_auth, uri_host)
+    return u"%s://%s%s" % (scheme, uri_auth, uri_host)
 
 def dict_craft(uri_dict):
     """
