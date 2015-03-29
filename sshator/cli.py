@@ -14,7 +14,10 @@ from sshator.uri import extract
 @click.option('--term', default='x-terminal-emulator', help='Used terminal')
 @click.argument('uri')
 def sshator(term, uri):
-
+    """
+    " Insecure SSH URI handler, open a SSH connection to given URI in
+    " a new terminal.
+    """
     extracted_uri = extract(uri)
     username = extracted_uri['username']
     password = extracted_uri['password']
@@ -38,4 +41,8 @@ def sshator(term, uri):
 @click.option('--term', default='x-terminal-emulator', help='Used terminal')
 @click.argument('uri')
 def telnetator(term, uri):
+    """
+    " Telnet URI handler, open a Telnet connection to given URI in
+    " a new terminal.
+    """
     pass

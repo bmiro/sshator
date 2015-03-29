@@ -51,9 +51,9 @@ def craft(host, username=None, password=None, port=22, scheme=u"ssh"):
 
     uri_username = username if username else u""
     uri_password = u":%s" % password if password else u""
-    uri_host = u"%s:%d" (host, port) if port else host
+    uri_host = u"%s:%d" % (host, port) if port else host
 
-    uri_auth = u"%s%s@" %(uri_username, uri_password) if uri_username else u""
+    uri_auth = u"%s%s@" % (uri_username, uri_password) if uri_username else u""
 
     return u"%s://%s%s" % (shceme, uri_auth, uri_host)
 
