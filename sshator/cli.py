@@ -45,4 +45,4 @@ def telnetator(term, uri):
     " Telnet URI handler, open a Telnet connection to given URI in
     " a new terminal.
     """
-    pass
+    raise NotImplemented
