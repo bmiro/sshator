@@ -23,9 +23,28 @@ URI Handler.
 
 # Install and configure
 
+## Prequisites
+
 For ssh URIs you will need to install sshpass (GPL), in debian-like distros:
 
     apt-get install sshpass
+
+# Install
+
+### Install downloaded package
+
+    python setup.py install
+
+
+### Install from GitHub
+
+    pip install git+git://github.com/bmiro/sshator.git
+
+### Install from PyPi
+
+    pip install sshator
+
+## Optional configuration
 
 If you want to change the used terminal change your default
 `x-terminal-emulator`, in debian-like distros:
