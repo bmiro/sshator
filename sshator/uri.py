@@ -17,18 +17,16 @@ def extract(uri):
     " }
     " If some part of the URL is missing key won't be inside the dict
     """
-    parts = {}
-
-    user_pass_regex = r'((?P<username>[^:@]+)(:(?P<password>[^@]+))?@)?'                              
+    user_pass_regex = r'((?P<username>[^:@]+)(:(?P<password>[^@]+))?@)?'
     host_port_regex = r'(?P<host>[^@:]+)(:(?P<port>\d+))?'
     uri_regex = user_pass_regex + host_port_regex
- 
-    m = match(uri_regex, uri)
- 
-    host = m.groupdict().get('host') # mandatory
-    username = m.groupdict().get('username', False)
-    password = m.groupdict().get('password', False)
-    port = m.groupdict().get('port', False)
+
+    mtch = match(uri_regex, uri)
+
+    host = mtch.groupdict().get('host') # mandatory
+    username = mtch.groupdict().get('username', False)
+    password = mtch.groupdict().get('password', False)
+    port = mtch.groupdict().get('port', False)
 
     extracted_uri = {
         'username': username,
@@ -70,9 +68,8 @@ def dict_craft(uri_dict):
     """
 
     host = uri_dict['host']
-    username =  uri_dict.get('username', None)
-    password =  uri_dict.get('password', None)
+    username = uri_dict.get('username', None)
+    password = uri_dict.get('password', None)
     port = uri_dict.get('port', 22)
-    schema = uri_dict.get('schema', u"ssh")
-    return craft_uri(host, username, passowrd, port)
-    
+    scheme = uri_dict.get('scheme', u"ssh")
+    return craft(host, username, password, port, scheme)
