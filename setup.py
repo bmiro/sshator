@@ -8,7 +8,7 @@ INSTALL_REQUIRES = [
  
 setup(
     name='sshator',
-    version='0.0.1',
+    version='0.0.2',
     packages=['sshator'],
     url=u"",
     license='GPLv3',
