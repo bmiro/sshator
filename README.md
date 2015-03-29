@@ -11,8 +11,8 @@ connection to remote.host.com at port 2323 using user l1s3r using
 secretpassword.
 
 This is useful if you have a webapp that crafts ssh/telnet links as
-[ssh://l1s3r:secretpassword@remote.host.com:2323](ssh://l1s3r:secretpassword@remote.host.com:2323) or
-[telnet://l1s3r:secretpassword@remote.host.com:2323](telnet://l1s3r:secretpassword@remote.host.com:2323) that you can
+`ssh://l1s3r:secretpassword@remote.host.com:2323` or
+`telnet://l1s3r:secretpassword@remote.host.com:2323` that you can
 associate your webbrowser to sshator.
 
 SSHator implements URI format described by [IETF RFC4248 for telnet](https://tools.ietf.org/html/rfc4248),
