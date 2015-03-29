@@ -2,8 +2,9 @@
 
 SSHator lets you to craft ssh/telnet uris and execute them easily i.e:
 
-   `sshator l1s3r:secretpassword@remote.host.com:2323`
-   `telnetator l1s3r:secretpassword@remote.host.com:2323`
+   sshator l1s3r:secretpassword@remote.host.com:2323
+
+   telnetator l1s3r:secretpassword@remote.host.com:2323
 
 This will open the default terminal (x-terminal-emulator) with an ssh/telnet
 connection to remote.host.com at port 2323 using user l1s3r using
@@ -24,12 +25,12 @@ URI Handler.
 
 For ssh URIs you will need to install sshpass (GPL), in debian-like distros:
 
-    `apt-get install sshpass`
+    apt-get install sshpass
 
 If you want to change the used terminal change your default
 `x-terminal-emulator`, in debian-like distros:
     
-    `update-alternatives --config x-terminal-emulator`
+    update-alternatives --config x-terminal-emulator
 
 # How to register custom URIs in GNU/Linux
 
