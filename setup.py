@@ -18,7 +18,7 @@ setup(
         sshator=sshator.cli:sshator
         telnetator=sshator.cli:telnetator
     """,
-    author=u"Bartomeu Miró Mateu",
+    author=u"Bartomeu Miro Mateu",
     author_email=u"bartomeumiro at gmail dot com",
     description=u"Insecure SSH/Telnet URI handler"
 )
