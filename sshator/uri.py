@@ -17,6 +17,12 @@ def extract(uri):
     " }
     " If some part of the URL is missing key won't be inside the dict
     """
+    if uri.startswith('ssh://'):
+        uri = uri[6:]
+ 
+    if uri.startswith('telnet://'):
+        uri = uri[9:]
+    
     user_pass_regex = r'((?P<username>[^:@]+)(:(?P<password>[^@]+))?@)?'
     host_port_regex = r'(?P<host>[^@:]+)(:(?P<port>\d+))?'
     uri_regex = user_pass_regex + host_port_regex
